@@ -1,0 +1,7 @@
+.headingBorder {
+  border: 2px solid rgb(43, 0, 255);
+  width: 50%;
+  height: auto;
+  display: flex;
+  margin: auto;
+}

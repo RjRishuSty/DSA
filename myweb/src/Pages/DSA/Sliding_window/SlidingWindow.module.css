@@ -1,0 +1,13 @@
+.slidingWindow {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  padding: 25px 12.5px;
+}
+.heading {
+  font-size: 2rem !important;
+  text-align: center !important;
+  text-transform: capitalize !important;
+  font-weight: 700 !important;
+}
+
