@@ -15,6 +15,6 @@
 }
 body{
   background-color: var(--primary-background);
-  font-family: var(--primary-font-family);
+  font-family: var(--primary-font-family) !important;
   color: var(--primary-font-color);
 }

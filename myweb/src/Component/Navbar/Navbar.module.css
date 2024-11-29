@@ -1,0 +1,64 @@
+.navbar {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: red;
+}
+
+.menuIcon {
+  font-size: 2rem !important;
+  cursor: pointer !important;
+}
+
+/* TODO:  IsMobile navbar section  */
+
+@keyframes slideOpen {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.sideBar {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 1rem;
+  background-color: #f1f1fa;
+  display: none;
+}
+.afterClickMenu {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem 1rem;
+  background-color: #f1f1fa;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0px);
+  animation: slideOpen 1.1s ease-in;
+}
+.brandSection {
+  /* border: 2px solid green; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeIcon {
+  font-size: 2rem !important;
+  color: var(--primary-font-color) !important;
+}
