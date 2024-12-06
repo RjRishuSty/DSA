@@ -4,11 +4,11 @@ import Styles from "./Logo.module.css";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import CodeIcon from "@mui/icons-material/Code";
 
-const Logo = () => {
+const Logo = ({isMobile}) => {
   return (
     <Box component="div" className={Styles.logoSection}>
       <LaptopMacIcon className={Styles.logoIcon} />
-      <CodeIcon className={Styles.codeIcon} />
+      <CodeIcon className={isMobile?Styles.MobileCodeIcon:Styles.codeIcon} />
     </Box>
   );
 };

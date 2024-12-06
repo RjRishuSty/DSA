@@ -80,7 +80,7 @@
 
 @media (max-width: 1111px) {
   .menuSection {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: auto !important;
   }
 }

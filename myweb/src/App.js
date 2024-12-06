@@ -7,7 +7,7 @@ const App = () => {
     <>
       
       <Navbar/>
-      {/* <SlidingWindow/> */}
+      <SlidingWindow/>
     </>
   )
 }

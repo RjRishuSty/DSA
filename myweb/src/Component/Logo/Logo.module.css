@@ -14,14 +14,18 @@
   /* border: 2px solid green; */
   font-size: 25px !important;
   position: absolute;
-  top: 1.7rem;
+  top: 1.6rem;
   font-family: var(--primary-font-family) !important;
   color: var(--logo-color) !important;
 }
 @media (max-width: 800px) {
   .codeIcon {
     /* border: 5px solid black; */
+    top: 1.3rem !important;
+  }
+  .MobileCodeIcon {
+    /* border: 1px solid black; */
     position: absolute;
-    top: 1.3rem;
+    top: 1.6rem;
   }
 }

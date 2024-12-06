@@ -19,18 +19,12 @@ export const Navbar = () => {
         <AppBar position="static">
           <Toolbar className={Styles.navbar}>
             <Logo />
-            <Box component="div" className={Styles.menuSection}>
-              <MenuItems />
-              <ButtonComponent />
-            </Box>
-
-            {/* {!isMobile &&
-                {
-                  <Box component="div" className={Styles.buttonSection}>
-                  <DarkMode mode={darkMode} setMode={setDarkMode} />
+            {!isMobile && (
+              <Box component="div" className={Styles.menuSection}>
+                <MenuItems />
                 <ButtonComponent />
-                </Box> 
-                }} */}
+              </Box>
+            )}
             {isMobile && (
               <IconButton
                 size="large"
@@ -38,11 +32,9 @@ export const Navbar = () => {
                 color="black"
                 aria-label="menu"
                 sx={{ mr: 2 }}
+                onClick={() => setClickedMenu(!clickedMenu)}
               >
-                <MenuIcon
-                  className={Styles.menuIcon}
-                  onClick={() => setClickedMenu(!clickedMenu)}
-                />
+                <MenuIcon className={Styles.menuIcon} />
               </IconButton>
             )}
           </Toolbar>
