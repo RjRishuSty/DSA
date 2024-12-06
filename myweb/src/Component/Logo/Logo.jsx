@@ -6,7 +6,7 @@ const Logo = ({isMobile}) => {
   return (
     <>
       <Typography variant="h6" component="div" className={isMobile?Styles.mobileLogo:Styles.logo}>
-        MERN January
+        Rj
       </Typography>
     </>
   );

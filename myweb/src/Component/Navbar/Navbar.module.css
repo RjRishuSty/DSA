@@ -1,11 +1,20 @@
 .navbar {
   /* border: 2px solid red; */
-  width: 100%;
+  width: 100% !important;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: red;
+  padding: 1rem 0px;
+  background-color: var( --navbar-bg) !important;
+}
+.buttonSection{
+  border: 2px solid red;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menuIcon {
@@ -43,7 +52,7 @@
   left: 0;
   padding: 1rem 1rem;
   background-color: #f1f1fa;
-  display: block;
+  display: block; 
   visibility: visible;
   opacity: 1;
   transform: translateX(0px);
@@ -60,5 +69,17 @@
 
 .closeIcon {
   font-size: 2rem !important;
-  color: var(--primary-font-color) !important;
+  color: var( --secondary-font-color) !important;
+}
+
+@media (max-width:1268px) {
+  .buttonSection{
+    border: 2px solid red;
+    width: auto !important;
+  }
+}
+@media (max-width:800px) {
+  .navbar{
+    padding: 0rem 0px;
+  }
 }

@@ -4,14 +4,14 @@
   font-size: 1.7rem !important;
   font-weight: 700 !important;
   font-family: var(--primary-font-family) !important;
-  color: var(--secondary-font-color) !important;
+  color: var(--primary-font-color) !important;
 }
 .mobileLogo {
   /* border: 2px solid green; */
   font-size: 1.7rem !important;
   font-weight: 700 !important;
   font-family: var(--primary-font-family) !important;
-  color: var(--primary-font-color) !important;
+  color: var( --secondary-font-color) !important;
 }
 
 @media (max-width: 1011px) {
