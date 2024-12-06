@@ -1,0 +1,8 @@
+.btnSection{
+    /* border: 2px solid red !important; */
+    width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

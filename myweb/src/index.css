@@ -9,10 +9,11 @@
 :root {
   --primary-background: #ffffff;
   --secondary-background: #000000;
-  --primary-font-color: white;
+  --primary-font-color: #0e44a0;
   --secondary-font-color: black;
   --primary-font-family: "Nunito", sans-serif;
   --navbar-bg: #4883e9;
+  --logo-color:#0e44a0;
 }
 body {
   background-color: var(--primary-background);

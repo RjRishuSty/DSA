@@ -1,18 +1,20 @@
 .menu {
-  border: 2px solid rgb(89, 255, 0);
-  width: 60%;
+  /* border: 2px solid rgb(89, 255, 0); */
+  width: 75%;
   height: auto;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
 }
 
-.menuItem {
+.menuItem { 
+  /* border: 2px solid red !important; */
   font-size: 1.1rem;
   font-family: var(--primary-font-family) !important;
   color: var( --primary-font-color) !important;
   font-weight: 600 !important;
   cursor: pointer;
+  margin: 0px 5px !important;
 }
 .isMobileMenu {
   /* border: 2px solid red !important; */
@@ -30,14 +32,17 @@
  
 }
 .menuItem:hover {
-  color: #7659e5 !important;
   letter-spacing: 0.5px;
   font-weight: 700 !important;
 } 
 @media (max-width: 1111px) {
-  .menu {
-    border: 2px solid green;
-    width: auto;
+
+  .menuItem { 
+    /* border: 2px solid red !important; */
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    cursor: pointer;
+    margin: 0px !important;
   }
 }
 @media (max-width: 800px) {

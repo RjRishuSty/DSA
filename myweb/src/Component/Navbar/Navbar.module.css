@@ -1,22 +1,28 @@
-.navbar {
+.navbarSection {
   /* border: 2px solid red; */
+  width: 100% !important;
+  height: auto;
+}
+.navbar {
+  /* border: 2px solid green !important; */
   width: 100% !important;
   height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0px;
-  background-color: var( --navbar-bg) !important;
+  /* background-color: var( --navbar-bg) !important; */
+  background-color: white !important;
 }
-.buttonSection{
-  border: 2px solid red;
-  width: auto;
+.menuSection {
+  /* border: 2px solid green !important; */
+  width: 80% !important;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  float: right;
 }
-
 .menuIcon {
   font-size: 2rem !important;
   cursor: pointer !important;
@@ -52,7 +58,7 @@
   left: 0;
   padding: 1rem 1rem;
   background-color: #f1f1fa;
-  display: block; 
+  display: block;
   visibility: visible;
   opacity: 1;
   transform: translateX(0px);
@@ -69,17 +75,20 @@
 
 .closeIcon {
   font-size: 2rem !important;
-  color: var( --secondary-font-color) !important;
+  color: var(--secondary-font-color) !important;
 }
 
-@media (max-width:1268px) {
-  .buttonSection{
+@media (max-width: 1111px) {
+  .menuSection {
     border: 2px solid red;
     width: auto !important;
   }
 }
-@media (max-width:800px) {
-  .navbar{
-    padding: 0rem 0px;
+@media (max-width: 800px) {
+  .navbar {
+    padding: 0.5rem 0px;
+  }
+  .menuSection{
+    display: none;
   }
 }

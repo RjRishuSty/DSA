@@ -1,26 +1,27 @@
-.logo {
-  /* border: 2px solid green; */
-  width: 20%;
-  font-size: 1.7rem !important;
-  font-weight: 700 !important;
-  font-family: var(--primary-font-family) !important;
-  color: var(--primary-font-color) !important;
+.logoSection {
+  /* border: 2px solid red; */
+  min-width: 10%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.mobileLogo {
-  /* border: 2px solid green; */
-  font-size: 1.7rem !important;
-  font-weight: 700 !important;
-  font-family: var(--primary-font-family) !important;
-  color: var( --secondary-font-color) !important;
+.logoIcon {
+  font-size: 50px !important;
+  color: var(--logo-color) !important;
 }
-
-@media (max-width: 1011px) {
-  .logo {
-    width: 30%;
-  }
+.codeIcon {
+  /* border: 2px solid green; */
+  font-size: 25px !important;
+  position: absolute;
+  top: 1.7rem;
+  font-family: var(--primary-font-family) !important;
+  color: var(--logo-color) !important;
 }
 @media (max-width: 800px) {
-  .logo {
-    width: auto;
+  .codeIcon {
+    /* border: 5px solid black; */
+    position: absolute;
+    top: 1.3rem;
   }
 }
