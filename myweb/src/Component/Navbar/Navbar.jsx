@@ -26,18 +26,22 @@ export const Navbar = () => {
               </Box>
             )}
             {isMobile && (
+              <>
+              
               <IconButton
                 size="large"
                 edge="start"
                 color="black"
                 aria-label="menu"
                 sx={{ mr: 2 }}
-                onClick={() => setClickedMenu(!clickedMenu)}
+                
               >
-                <MenuIcon className={Styles.menuIcon} />
+              <DarkMode mode={darkMode} setMode={setDarkMode}/>
+                <MenuIcon className={Styles.menuIcon}  onClick={() => setClickedMenu(!clickedMenu)}/>
               </IconButton>
+              </>
             )}
-          </Toolbar>
+          </Toolbar> 
         </AppBar>
         {isMobile && (
           <Box className={clickedMenu ? Styles.afterClickMenu : Styles.sideBar}>

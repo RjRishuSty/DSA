@@ -14,7 +14,7 @@
   /* background-color: var( --navbar-bg) !important; */
   background-color: white !important;
 }
-.menuSection {
+.menuSection { 
   /* border: 2px solid green !important; */
   width: 80% !important;
   height: auto;
@@ -75,14 +75,14 @@
 
 .closeIcon {
   font-size: 2rem !important;
-  color: var(--secondary-font-color) !important;
+  color: var( --primary-font-color) !important;
 }
 
 @media (max-width: 1111px) {
   .menuSection {
     /* border: 2px solid red; */
     width: auto !important;
-  }
+  } 
 }
 @media (max-width: 800px) {
   .navbar {
