@@ -1,0 +1,40 @@
+.footer {
+  /* border: 2px solid black; */
+  width: 100%;
+  height: auto;
+  padding: 80px 10px 50px 10px;
+  background: var(--footer-bg);
+}
+.footerItems {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  
+}
+.description{
+    font-size: 1rem !important;
+    letter-spacing: 0.7px !important;
+    word-spacing: 0.5px !important;
+    padding: 10px 25px 10px 10px !important;
+    color: var( --primary-font-color);
+}
+.description >span{
+    color: var(--learn-more-color) !important;
+    cursor: pointer;
+}
+.description >span:hover{
+    font-weight: 600;
+}
+.headingSection {
+  width: 100%;
+  height: auto;
+  margin: 0px 0px 10px 15px !important;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.heading {
+  font-size: 1.5rem !important;
+  font-weight: 500 !important;
+  color: var( --primary-font-color) !important;
+}

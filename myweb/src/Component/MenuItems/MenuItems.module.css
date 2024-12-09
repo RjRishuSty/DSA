@@ -1,5 +1,4 @@
 .menu {
-  /* border: 2px solid rgb(89, 255, 0); */
   width: 75%;
   height: auto;
   display: flex;
@@ -8,16 +7,14 @@
 }
 
 .menuItem { 
-  /* border: 2px solid red !important; */
   font-size: 1.1rem;
   font-family: var(--primary-font-family) !important;
-  color: var( --primary-font-color) !important;
+  color: var( --secondary-font-color) !important;
   font-weight: 600 !important;
   cursor: pointer;
   margin: 0px 5px !important;
 }
 .isMobileMenu {
-  /* border: 2px solid red !important; */
   width: 100%;
   height: auto;
   padding: 2rem 0rem;
@@ -32,6 +29,7 @@
  
 }
 .menuItem:hover {
+  color: var( --footer-bg) !important;
   letter-spacing: 0.5px;
   font-weight: 700 !important;
 } 

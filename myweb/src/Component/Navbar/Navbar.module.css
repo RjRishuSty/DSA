@@ -75,7 +75,7 @@
 
 .closeIcon {
   font-size: 2rem !important;
-  color: var( --primary-font-color) !important;
+  color: var(--logo-color) !important;
 }
 
 @media (max-width: 1111px) {

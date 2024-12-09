@@ -1,17 +1,17 @@
 import React from "react";
 import Styles from "./MenuItems.module.css";
 import { Box, MenuItem } from "@mui/material";
-
+export const menu = [
+  { menuItem: "Home" },
+  { menuItem: "About" },
+  { menuItem: "Contact" },
+  { menuItem: "Sprint" },
+  { menuItem: "DSA" },
+  { menuItem: "HRML" },
+  { menuItem: "CSS" },
+];
 const MenuItems = ({ isMobile }) => {
-  const menu = [
-    { menuItem: "Home" },
-    { menuItem: "About" },
-    { menuItem: "Contact" },
-    { menuItem: "Sprint" },
-    { menuItem: "DSA" },
-    { menuItem: "HRML" },
-    { menuItem: "CSS" },
-  ];
+  
   return (
     <Box className={isMobile ? Styles.isMobileMenu : Styles.menu}>
       {menu &&

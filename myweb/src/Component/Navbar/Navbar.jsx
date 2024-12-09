@@ -18,7 +18,7 @@ export const Navbar = () => {
       <Box component="nav" className={Styles.navbarSection}>
         <AppBar position="static">
           <Toolbar className={Styles.navbar}>
-            <Logo />
+            <Logo context="navbar"/>
             {!isMobile && (
               <Box component="div" className={Styles.menuSection}>
                 <MenuItems />
@@ -46,7 +46,7 @@ export const Navbar = () => {
         {isMobile && (
           <Box className={clickedMenu ? Styles.afterClickMenu : Styles.sideBar}>
             <Box className={Styles.brandSection}>
-              <Logo isMobile={isMobile} />
+              <Logo context="navbar"/>
               <CloseIcon
                 className={Styles.closeIcon}
                 onClick={() => setClickedMenu(!clickedMenu)}

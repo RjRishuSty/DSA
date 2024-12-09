@@ -18,38 +18,23 @@ const SlidingWindow = () => {
         <Typography className={Styles.heading}>
           Sliding window algorithm
         </Typography>
-        <HeadingBorder />
+        <HeadingBorder context="text" />
       </Box>
       <Box component="div" mt={5}>
         <Grid container>
-          <Grid
-            item
-            md={4}
-            sm={5}
-            xs={12}
-            mb={3}
-            // sx={{ border: "2px solid yellow" }}
-          >
+          <Grid item md={4} sm={5} xs={12} mb={3}>
             <img
               src={heroImg}
               alt="Sliding Window"
               style={{ width: "100%", height: "auto", padding: "15px" }}
             />
           </Grid>
-          <Grid
-            item
-            md={8}
-            sm={7}
-            xs={12}
-            mb={3}
-            // sx={{ border: "2px solid yellow" }}
-            p={3}
-          >
+          <Grid item md={8} sm={7} xs={12} mb={3} p={3}>
             <Typography
               variant="h4"
               component="h4"
               mb={1}
-              sx={{ fontWeight: "600" }}
+              sx={{ fontWeight: "600", color: "black" }}
             >
               What is Sliding?
             </Typography>
@@ -61,6 +46,7 @@ const SlidingWindow = () => {
                 fontSize: "1.1rem",
                 letterSpacing: "0.5px",
                 wordSpacing: "2px",
+                color: "black",
               }}
             >
               The sliding window algorithm is an efficient technique used to
@@ -76,15 +62,15 @@ const SlidingWindow = () => {
               component="h5"
               mb={1}
               mt={2}
-              sx={{ fontWeight: "600" }}
+              sx={{ fontWeight: "600",color:"black" }}
             >
               How the Sliding Window Algorithm Works?
             </Typography>
-            <Typography component="p" mb={1}>
+            <Typography component="p" mb={1} sx={{color:"black"}}>
               The sliding window can be either fixed-size or variable-size,
               depending on the problem requirements:
             </Typography>
-            <List>
+            <List sx={{color:"black"}}>
               <ListItem>
                 Fixed-size window: The window size remains constant and slides
                 over the array, one element at a time.
@@ -94,10 +80,10 @@ const SlidingWindow = () => {
                 dynamically as it slides over the array.
               </ListItem>
             </List>
-            <Typography variant="h5" component="h5" sx={{ fontWeight: "600" }}>
+            <Typography variant="h5" component="h5" sx={{ fontWeight: "600",color:"black" }}>
               Sliding Window Space Complexity and Time Complexity:-
             </Typography>
-            <List>
+            <List sx={{color:"black"}}>
               <ListItem>Time Complexity:- Best Case O(n)</ListItem>
               <ListItem>Space Complexity:- Best Case O(1)</ListItem>
             </List>
