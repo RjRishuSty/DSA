@@ -51,7 +51,7 @@ export const Footer = () => {
             <Typography component="h4" className={Styles.heading}>
               Menu
             </Typography>
-            <HeadingBorder context="footer" />
+            <HeadingBorder context="borderTwo" />
           </Box>
           <List>
             {menus.map((tutorial) => (
@@ -73,7 +73,7 @@ export const Footer = () => {
             <Typography component="h4" className={Styles.heading}>
               Notes
             </Typography>
-            <HeadingBorder context="footer" />
+            <HeadingBorder context="borderTwo" />
           </Box>
           <List>
             {notes.map((tutorial) => (

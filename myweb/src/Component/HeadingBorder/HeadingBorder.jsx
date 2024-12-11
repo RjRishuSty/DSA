@@ -1,14 +1,15 @@
-import React from 'react'
-import Styles from './HeadingBorder.module.css';
+import React from "react";
+import Styles from "./HeadingBorder.module.css";
 
-const HeadingBorder = ({context}) => {
-  const isFooter = context ==="footer";
+const HeadingBorder = ({ context }) => {
+  const border = context === "borderTwo";
   return (
     <>
-    <hr className={isFooter?Styles.footerMenuBorder:Styles.headingBorder}/>
+      <hr
+        className={border ? Styles.borderTwo : Styles.borderOne}
+      />
     </>
-  )
-}
+  );
+};
 
-export default HeadingBorder
- 
+export default HeadingBorder;

@@ -1,12 +1,12 @@
-.headingBorder {
-  border: 2px solid rgb(43, 0, 255);
-  width: 50%;
-  height: auto;
-  display: flex;
-  margin: auto;
-}
-.footerMenuBorder{
-  border: 1px solid rgb(255, 255, 255);
+.borderOne {
+  border: 1px solid var(--logo-color);
   width: 30%;
   height: auto;
+  margin-top: 1rem;
 }
+.borderTwo{
+  border: 1px solid var( --primary-background);
+  width: 30%;
+  height: auto;
+  margin-top: 1rem;
+} 
