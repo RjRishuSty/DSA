@@ -14,6 +14,7 @@ import Styles from "./Footer.module.css";
 import Logo from "../Logo/Logo";
 import HeadingBorder from "../HeadingBorder/HeadingBorder";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { NavLink } from "react-router-dom";
 
 export const Footer = () => {
   const notes = [
@@ -25,13 +26,13 @@ export const Footer = () => {
   ];
 
   const menus = [
-    { item: "Home" },
-    { item: "About" },
-    { item: "Contact" },
-    { item: "Sprint" },
-    { item: "DSA" },
-    { item: "HRML" },
-    { item: "CSS" },
+    { item: "Home", path: "/" },
+    { item: "About", path: "about" },
+    { item: "Contact", path: "contact" },
+    { item: "Sprint", path: "sprint" },
+    { item: "DSA", path: "dsa" },
+    { item: "Login", path: "login" },
+    { item: "Register", path: "register" },
   ];
 
   return (
@@ -56,14 +57,24 @@ export const Footer = () => {
           <List>
             {menus.map((tutorial) => (
               <ListItem disablePadding key={tutorial.item}>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <ArrowForwardIcon
-                      sx={{ fontSize: "1.5rem", color: "#1976d2" }}
+                <NavLink
+                  to={tutorial.path}
+                  style={{ textDecoration: "none" }}
+                  className={({ isActive }) =>
+                    isActive ? Styles.inActive : Styles.unActive
+                  }
+                >
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <ArrowForwardIcon
+                        sx={{ fontSize: "1.5rem", color: "#1976d2" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={tutorial.item}
                     />
-                  </ListItemIcon>
-                  <ListItemText primary={tutorial.item} />
-                </ListItemButton>
+                  </ListItemButton>
+                </NavLink>
               </ListItem>
             ))}
           </List>
@@ -84,7 +95,7 @@ export const Footer = () => {
                       sx={{ fontSize: "1.5rem", color: "#1976d2" }}
                     />
                   </ListItemIcon>
-                  <ListItemText primary={tutorial.item} />
+                  <ListItemText primary={tutorial.item} style={{color:'white'}} />
                 </ListItemButton>
               </ListItem>
             ))}

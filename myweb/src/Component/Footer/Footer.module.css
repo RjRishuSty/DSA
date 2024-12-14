@@ -1,5 +1,5 @@
 .footer {
-  /* border: 2px solid black; */
+  /* border: 2px solid red; */
   width: 100%;
   height: auto;
   padding: 80px 10px 50px 10px;
@@ -11,6 +11,7 @@
   padding: 10px;
   
 }
+
 .description{
     font-size: 1rem !important;
     letter-spacing: 0.7px !important;
@@ -23,7 +24,7 @@
     cursor: pointer;
 }
 .description >span:hover{
-    font-weight: 600;
+    font-weight: 600; 
 }
 .headingSection {
   width: 100%;
@@ -36,5 +37,11 @@
 .heading {
   font-size: 1.5rem !important;
   font-weight: 500 !important;
+  color: var( --primary-font-color) !important;
+}
+.inActive{
+  color: var(--learn-more-color) !important;
+}
+.unActive{
   color: var( --primary-font-color) !important;
 }

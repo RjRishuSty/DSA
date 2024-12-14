@@ -1,0 +1,100 @@
+.heroSection {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  margin: 3rem 0px 3rem 0px;
+  padding: 50px 0px;
+}
+
+.intro {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.heading {
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  color: var(--secondary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+}
+.heading > span {
+  font-size: 2.5rem !important;
+  font-weight: 800 !important;
+  color: var(--logo-color) !important;
+  font-family: var(--primary-font-family) !important;
+}
+.description {
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  color: var(--secondary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  opacity: 0.8;
+}
+
+.description > span {
+  color: var(--learn-more-color) !important;
+  cursor: pointer;
+}
+.description > span:hover {
+  color: var(--logo-color) !important;
+}
+
+.contactInfo {
+  /* border: 2px solid red; */
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  margin: 1.5rem 0px;
+}
+.contactInfo > :first-child {
+  border-right: 2px solid gray !important;
+  padding-right: 6px;
+}
+.contactText {
+  font-size: 1rem !important;
+  font-family: var(--primary-font-family) !important;
+  color: var(--logo-color) !important;
+  font-weight: 600 !important;
+  text-align: start;
+  transition: color 0.5s ease !important;
+  cursor: pointer !important;
+  margin-right: 5px !important;
+}
+.contactText > a{
+    text-decoration: none !important;
+}
+.contactText > :hover {
+  color: black !important;
+  font-weight: 800 !important;
+}
+.imgGrid{
+    /* border: 2px solid black; */
+    width: 100% !important;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.myPic {
+  width: 250px !important;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px black;
+}
+
+@media (max-width: 617px) {
+    .heroSection {
+        margin: 2rem 0px 3rem 0px;
+        padding: 10px 0px 50px 0px;
+      }
+  .contactInfo {
+    font-size: 0.9rem !important;
+    font-weight: 400;
+  }
+}

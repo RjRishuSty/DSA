@@ -1,21 +1,35 @@
-import React from "react";
-import SlidingWindow from "./Pages/DSA/Sliding_window/SlidingWindow";
-import { Navbar } from "./Component/Navbar/Navbar";
-import { Footer } from "./Component/Footer/Footer";
-import Login from "./Pages/Login/Login";
-import Register from "./Pages/Register/Register";
-
+import React from 'react';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import Home from './Pages/Home/Home';
+import Layout from './Component/Layout/Layout';
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 
 const App = () => {
-  return (
-    <>
-      {/* <Navbar />
-      <SlidingWindow />
-      <Footer /> */}
-      <Login/>
-      {/* <Register /> */}
-    </>
-  );
-};
 
-export default App;
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element:<Layout/>,
+      children:[
+        {
+          path:'',
+          element:<Home/>
+        },
+        {
+          path:'login',
+          element:<Login/>
+        },
+        {
+          path:'register',
+          element:<Register/>
+        }
+      ]
+    }
+  ])
+  return (
+    <RouterProvider router={router}/>
+  )
+}
+
+export default App
