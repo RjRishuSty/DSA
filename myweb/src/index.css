@@ -21,3 +21,6 @@ body {
   font-family: var(--primary-font-family) !important;
   color: var(--secondary-font-color);
 }
+a{
+  text-decoration: none !important;
+}

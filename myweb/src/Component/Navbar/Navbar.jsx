@@ -12,41 +12,45 @@ export const Navbar = () => {
   const isMobile = useMediaQuery("(max-width:800px)");
   const [clickedMenu, setClickedMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-
+  const [logedIn, setLogedIn] = useState(() => {
+    const login = localStorage.getItem("LogedIn");
+    return login ? true : false;
+  });
   return (
     <>
       <Box component="nav" className={Styles.navbarSection}>
         <AppBar position="static">
           <Toolbar className={Styles.navbar}>
-            <Logo context="navbar"/>
+            <Logo context="navbar" />
             {!isMobile && (
               <Box component="div" className={Styles.menuSection}>
                 <MenuItems />
-                <ButtonComponent />
+                {!logedIn && <ButtonComponent />}
               </Box>
             )}
             {isMobile && (
               <>
-              
-              <IconButton
-                size="large"
-                edge="start"
-                color="black"
-                aria-label="menu"
-                sx={{ mr: 2 }}
-                
-              >
-              <DarkMode mode={darkMode} setMode={setDarkMode}/>
-                <MenuIcon className={Styles.menuIcon}  onClick={() => setClickedMenu(!clickedMenu)}/>
-              </IconButton>
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="black"
+                  aria-label="menu"
+                  sx={{ mr: 2 }}
+                >
+                  <DarkMode mode={darkMode} setMode={setDarkMode} />
+                  <MenuIcon
+                    className={Styles.menuIcon}
+                    onClick={() => setClickedMenu(!clickedMenu)}
+                  />
+                </IconButton>
               </>
             )}
-          </Toolbar> 
+          </Toolbar>
         </AppBar>
         {isMobile && (
           <Box className={clickedMenu ? Styles.afterClickMenu : Styles.sideBar}>
             <Box className={Styles.brandSection}>
-              <Logo context="navbar"/>
+              <Logo context="navbar" />
               <CloseIcon
                 className={Styles.closeIcon}
                 onClick={() => setClickedMenu(!clickedMenu)}

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./Register.module.css";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Box, Button, Card, TextField, Typography } from "@mui/material";
 import HeadingBorder from "../../Component/HeadingBorder/HeadingBorder";
 import { useSnackbar } from "notistack";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { enqueueSnackbar } = useSnackbar();
@@ -22,7 +24,7 @@ const Register = () => {
     e.preventDefault();
     if (validateInputData(formData)) {
       localStorage.setItem("RegisterData", JSON.stringify(formData));
-      enqueueSnackbar('Registered successfully', {variant:'success'});
+      enqueueSnackbar("Registered successfully", { variant: "success" });
     }
   };
 
@@ -64,10 +66,17 @@ const Register = () => {
     <Box className={Styles.registerPage}>
       <Card className={Styles.registerCard}>
         <Box className={Styles.headingSection}>
-          <Typography component="h3" className={Styles.heading}>
-            Register
-          </Typography>
-          <HeadingBorder context="borderOne" />
+          <Box component="div" className={Styles.headingWithBorder}>
+            <Typography component="h3" className={Styles.heading}>
+              Register
+            </Typography>
+            <HeadingBorder context="borderOne" />
+          </Box>
+          <Box component="div">
+            <Link to="/">
+              <ArrowBackIcon className={Styles.backIcon} />
+            </Link>
+          </Box>
         </Box>
 
         <form className={Styles.form} onSubmit={submitForm}>
@@ -103,7 +112,7 @@ const Register = () => {
           </Button>
         </form>
         <Typography className={Styles.description}>
-          Already have an account? <span>Login here</span>
+          Already have an account? <Link to="/login"><span>Login here</span></Link>
         </Typography>
       </Card>
     </Box>

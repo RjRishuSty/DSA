@@ -19,13 +19,38 @@
   height: auto;
   margin-bottom: 10px !important;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
+}
+.headingWithBorder{
+  width: 40%;
+  display: flex; 
+  justify-content: start;
+  align-items: start;
 }
 .heading {
   font-size: 2rem !important;
   font-weight: 900 !important;
   font-family: var(--primary-font-family) !important;
+  color: var(--logo-color) !important;
+}
+.backIcon > a{
+  text-decoration: none;
+}
+.backIcon{
+  width: 50px !important;
+  height: 50px !important;
+  padding: 10px;
+  background-color: var(--logo-color) !important;
+  border-radius: 50% !important;
+  color: var(--primary-font-color) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.backIcon:hover{
+  background-color: var(--primary-background) !important;
   color: var(--logo-color) !important;
 }
 .form {
@@ -60,7 +85,7 @@
     font-weight: 600 !important;
 }
 
-@media (max-width:1150px) {
+@media (max-width:1150px) { 
     .loginCard{
         width: 40%;
     }

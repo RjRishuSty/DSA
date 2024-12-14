@@ -5,7 +5,7 @@ const HeadingBorder = ({ context }) => {
   const border = context === "borderTwo";
   return (
     <>
-      <hr
+      <hr 
         className={border ? Styles.borderTwo : Styles.borderOne}
       />
     </>
