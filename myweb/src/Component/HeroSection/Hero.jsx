@@ -1,13 +1,6 @@
 import React from "react";
 import Styles from "./Hero.module.css";
-import {
-  Box,
-  Card,
-  CardContent,
-  Container,
-  Grid,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import myPic from "../../assets/mypic.png";
 import { Link } from "react-router-dom";
 
@@ -31,7 +24,7 @@ const Hero = () => {
                 I’m Rishu Raj, a passionate Frontend Developer and MERN Stack
                 Enthusiast from Bihar, India. I graduated with a BCA degree in
                 2023 and have been building modern, responsive, and{" "}
-                <span>learn more...</span>
+                <span><Link to="about">learn more...</Link></span>
               </Typography>
             </Box>
             <Box component="div" className={Styles.contactInfo}>
@@ -39,7 +32,10 @@ const Hero = () => {
                 <Link to="tel:+91790333504">+917903335804</Link>
               </Typography>
               <Typography component="h4" className={Styles.contactText}>
-               <Link to="mailto:rishurajk59@gmail.com"> rishurajk59@gmail.com</Link>
+                <Link to="mailto:rishurajk59@gmail.com">
+                  {" "}
+                  rishurajk59@gmail.com
+                </Link>
               </Typography>
             </Box>
           </Grid>
@@ -50,10 +46,9 @@ const Hero = () => {
             xs={12}
             sx={{
               order: { md: 2, sm: 1, xs: 1 },
-              marginBottom:{sm:5,xs:5}
+              marginBottom: { sm: 5, xs: 5 },
             }}
             className={Styles.imgGrid}
-
           >
             <img src={myPic} alt="Rishu img" className={Styles.myPic} />
           </Grid>

@@ -1,0 +1,24 @@
+.skillSection {
+  /* border: 2px solid red; */
+  background-color: var(--Third-background) !important;
+  padding: 50px 10px;
+}
+.headingBox {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-bottom: 2rem !important;
+}
+.heading {
+  font-family: var(--primary-font-family) !important;
+  font-size: 2rem !important;
+  font-weight: 900 !important;
+  color: var(--logo-color) !important;
+  position: relative;
+  top: 0.5rem;
+}
+/* .skillBox {
+  border: 2px solid red;
+  
+} */
+

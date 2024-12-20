@@ -14,7 +14,7 @@ import Styles from "./Footer.module.css";
 import Logo from "../Logo/Logo";
 import HeadingBorder from "../HeadingBorder/HeadingBorder";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const Footer = () => {
   const notes = [
@@ -44,7 +44,7 @@ export const Footer = () => {
             I’m Rishu Raj, a passionate Frontend Developer and MERN Stack
             Enthusiast from Bihar, India. I graduated with a BCA degree in 2023
             and have been building modern, responsive, and{" "}
-            <span>learn more...</span>
+            <span><Link to="about">learn more...</Link></span>
           </Typography>
         </Grid>
         <Grid item className={Styles.footerItems} md={4} sm={6} xs={12}>

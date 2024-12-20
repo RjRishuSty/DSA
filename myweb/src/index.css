@@ -9,6 +9,7 @@
 :root {
   --primary-background: rgb(255, 255, 255);
   --secondary-background: rgb(0, 0, 0);
+  --Third-background:#f1f1fa;
   --primary-font-color: rgb(255, 255, 255);
   --secondary-font-color: rgb(0, 0, 0);
   --primary-font-family: "Nunito", sans-serif;
