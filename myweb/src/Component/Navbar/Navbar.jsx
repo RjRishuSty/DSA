@@ -19,9 +19,9 @@ export const Navbar = () => {
   return (
     <>
       <Box component="nav" className={Styles.navbarSection}>
-        <AppBar position="static">
+        <AppBar position="static" style={{boxShadow:"none"}}>
           <Toolbar className={Styles.navbar}>
-            <Logo context="navbar" />
+            <Logo context="navbar" /> 
             {!isMobile && (
               <Box component="div" className={Styles.menuSection}>
                 <MenuItems />
@@ -57,6 +57,17 @@ export const Navbar = () => {
               />
             </Box>
             <MenuItems isMobile={isMobile} />
+          </Box>
+        )}
+        {!isMobile && (
+          <Box
+            style={{
+              position: "fixed",
+              top: "60vh",
+              right: "0px",
+            }}
+          >
+            <DarkMode  mode={darkMode} setMode={setDarkMode}/>
           </Box>
         )}
       </Box>

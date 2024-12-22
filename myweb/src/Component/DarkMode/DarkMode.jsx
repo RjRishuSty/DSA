@@ -1,17 +1,23 @@
 import { IconButton } from "@mui/material";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import Styles from './DarkMode.module.css';
+import Styles from "./DarkMode.module.css";
 
 const DarkMode = ({ setMode, mode }) => {
+  const toggleMode = () => {
+    setMode(!mode);
+    document.body.classList.toggle('dark-mode', !mode);
+    document.body.classList.toggle('light-mode', mode);
+  };
   return (
     <IconButton
-      onClick={() => setMode(!mode)}
+      onClick={toggleMode}
       color="inherit"
       className={Styles.modeSection}
       sx={{
         border: "1px solid",
         borderColor: mode ? "white" : "black",
+        color: mode ? "white" : "black",
         borderRadius: "50%",
         marginRight: "20px",
       }}

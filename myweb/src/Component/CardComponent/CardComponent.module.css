@@ -2,7 +2,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50% !important;
-    background-color: var(--logo-color) !important;
+    background-color:#0e44a0 !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,4 +31,6 @@
 }
 .card:hover .skillText{
     display: block;
+    font-family: var(--primary-font-family) !important;
+color: white !important;
 }

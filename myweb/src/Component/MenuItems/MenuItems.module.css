@@ -9,7 +9,7 @@
 .menuItem {
   font-size: 1.1rem;
   font-family: var(--primary-font-family) !important;
-  color: var(--secondary-font-color) !important;
+  color: var(--primary-font-color) !important;
   font-weight: 600 !important;
   cursor: pointer;
   margin: 0px 5px !important;
@@ -32,7 +32,7 @@
 .mobileItem {
   font-size: 1.1rem;
   font-family: var(--primary-font-family) !important;
-  color: var(--secondary-font-color) !important;
+  color: var(--primary-font-color) !important;
   font-weight: 600 !important;
   cursor: pointer;
 }
@@ -55,3 +55,4 @@
     display: none;
   }
 }
+ 

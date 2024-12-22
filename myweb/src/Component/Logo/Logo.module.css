@@ -17,8 +17,9 @@
   color: var(--logo-color) !important;
 }
 .footerLogoColor{
+  /* border: 2px solid red !important; */
   font-size: 100px !important;
-  color: var(--primary-background) !important;
+  color: white !important;
 }
 
 .footerCodeIcon {
@@ -26,6 +27,6 @@
   position: absolute;
   margin-bottom: 8px;
   font-family: var(--primary-font-family) !important;
-  color: var(--primary-background) !important;
+  color: white !important;
 }
 

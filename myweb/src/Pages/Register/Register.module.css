@@ -42,9 +42,9 @@
   width: 50px !important;
   height: 50px !important;
   padding: 10px;
-  background-color: var(--logo-color) !important;
+  background-color: #0e44a0 !important;
   border-radius: 50% !important;
-  color: var(--primary-font-color) !important;
+  color: white !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,9 +73,11 @@
   width: 100%;
   height: auto;
   margin: 10px 0px !important;
+  background-color: white;
+  border-radius: 5px !important;
 }
 .btn {
-  background-color: var(--logo-color) !important;
+  background-color: #0e44a0 !important;
 }
 .description {
   /* border: 2px solid red; */
@@ -83,6 +85,7 @@
   font-family: var(--primary-font-family) !important;
   font-weight: 600 !important;
   text-align: start !important;
+  color: var(--primary-font-color) !important;
 }
 .description > span {
   font-weight: 700 !important;

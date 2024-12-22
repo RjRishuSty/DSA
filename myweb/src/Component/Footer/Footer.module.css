@@ -1,5 +1,4 @@
 .footer {
-  /* border: 2px solid red; */
   width: 100%;
   height: auto;
   padding: 80px 10px 50px 10px;
@@ -9,22 +8,22 @@
   width: 100%;
   height: auto;
   padding: 10px;
-  
 }
 
-.description{
-    font-size: 1rem !important;
-    letter-spacing: 0.7px !important;
-    word-spacing: 0.5px !important;
-    padding: 10px 25px 10px 10px !important;
-    color: var( --primary-font-color);
+.description {
+  /* border: 2px solid red; */
+  font-size: 1rem !important;
+  letter-spacing: 0.7px !important;
+  word-spacing: 0.5px !important;
+  padding: 10px 25px 10px 10px !important;
+  color: white !important;
 }
-.description >span{
-    color: var(--learn-more-color) !important;
-    cursor: pointer;
+.description > span {
+  color: var(--learn-more-color) !important;
+  cursor: pointer;
 }
-.description >span:hover{
-    font-weight: 600; 
+.description > span:hover {
+  font-weight: 600;
 }
 .headingSection {
   width: 100%;
@@ -37,11 +36,11 @@
 .heading {
   font-size: 1.5rem !important;
   font-weight: 500 !important;
-  color: var( --primary-font-color) !important;
+  color: white !important;
 }
-.inActive{
+.inActive {
   color: var(--learn-more-color) !important;
 }
-.unActive{
-  color: var( --primary-font-color) !important;
+.unActive {
+  color: white !important;
 }

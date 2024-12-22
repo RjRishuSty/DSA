@@ -1,5 +1,5 @@
-import { Box } from "@mui/material";
-import React, { useState } from "react";
+
+import React from "react";
 import Styles from "./Logo.module.css";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import CodeIcon from "@mui/icons-material/Code";

@@ -48,7 +48,7 @@ export const Footer = () => {
           </Typography>
         </Grid>
         <Grid item className={Styles.footerItems} md={4} sm={6} xs={12}>
-          <Box component="div" className={Styles.headingSection}>
+          <Box component="div" className={Styles.headingSection}> 
             <Typography component="h4" className={Styles.heading}>
               Menu
             </Typography>

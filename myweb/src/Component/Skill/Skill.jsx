@@ -1,52 +1,49 @@
 import React from "react";
 import Styles from "./Skill.module.css";
-import { Box, Container, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Container, css, Grid, Typography, useMediaQuery } from "@mui/material";
 import HeadingBorder from "../HeadingBorder/HeadingBorder";
 import Card from "../CardComponent/CardComponent";
+import gitImg from '../../assets/git.png';
+import htmlImg from '../../assets/html.png';
+import cssImg from '../../assets/css.png';
+import jsImg from '../../assets/js.png';
+import reactImg from '../../assets/react.png';
+import bootstrapImg from '../../assets/bootstrap.png'
+
 
 const Skill = () => {
   const notBorder = useMediaQuery('(max-width:525px)')
   const skills = [
     {
       id: 1,
-      item: "HTML",
+      text: "HTML",
+      img:htmlImg
     },
     {
       id: 2,
-      item: "CSS",
+      text: "CSS",
+      img:cssImg
     },
     {
       id: 3,
-      item: "Bootstrap",
+      text: "Bootstrap",
+      img:bootstrapImg
     },
     {
       id: 4,
-      item: "Javascript",
+      text: "Javascript",
+      img:jsImg
     },
     {
       id: 5,
-      item: "React",
+      text: "React",
+      img:reactImg
     },
     {
       id: 6,
-      item: "Git",
-    },
-    {
-      id: 3,
-      item: "Bootstrap",
-    },
-    {
-      id: 4,
-      item: "Javascript",
-    },
-    {
-      id: 5,
-      item: "React",
-    },
-    {
-      id: 6,
-      item: "Git",
-    },
+      text: "Git",
+      img:gitImg
+    }
   ];
   return (
     <Box component="section" className={Styles.skillSection}>
