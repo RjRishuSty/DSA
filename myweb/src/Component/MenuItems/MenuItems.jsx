@@ -8,7 +8,7 @@ export const menu = [
   { menuItem: "Contact", path: "contact" },
   { menuItem: "Sprint", path: "sprint" },
   { menuItem: "DSA", path: "dsa" },
-  { menuItem: "HRML", path: "html" },
+  { menuItem: "React", path: "learn-react" },
   { menuItem: "CSS", path: "css" },
 ];
 const MenuItems = ({ isMobile }) => {

@@ -11,7 +11,6 @@ import ButtonComponent from "../ButtonComponent/ButtonComponent";
 export const Navbar = () => {
   const isMobile = useMediaQuery("(max-width:800px)");
   const [clickedMenu, setClickedMenu] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [logedIn, setLogedIn] = useState(() => {
     const login = localStorage.getItem("LogedIn");
     return login ? true : false;
@@ -19,9 +18,9 @@ export const Navbar = () => {
   return (
     <>
       <Box component="nav" className={Styles.navbarSection}>
-        <AppBar position="static" style={{boxShadow:"none"}}>
+        <AppBar position="static" style={{ boxShadow: "none" }}>
           <Toolbar className={Styles.navbar}>
-            <Logo context="navbar" /> 
+            <Logo context="navbar" />
             {!isMobile && (
               <Box component="div" className={Styles.menuSection}>
                 <MenuItems />
@@ -37,7 +36,7 @@ export const Navbar = () => {
                   aria-label="menu"
                   sx={{ mr: 2 }}
                 >
-                  <DarkMode mode={darkMode} setMode={setDarkMode} />
+                  <DarkMode />
                   <MenuIcon
                     className={Styles.menuIcon}
                     onClick={() => setClickedMenu(!clickedMenu)}
@@ -67,7 +66,7 @@ export const Navbar = () => {
               right: "0px",
             }}
           >
-            <DarkMode  mode={darkMode} setMode={setDarkMode}/>
+            <DarkMode />
           </Box>
         )}
       </Box>

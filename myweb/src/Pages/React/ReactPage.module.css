@@ -1,0 +1,82 @@
+.ReactMainSection {
+  border: 2px solid red;
+  width: 100%;
+  height: auto;
+  padding: 50px 0px;
+}
+
+.ReactSection {
+  /* border: 2px solid rgb(72, 255, 0); */
+  width: 100%;
+  height: auto;
+  margin-top: 25px;
+}
+.img {
+  background-color: #121212 !important;
+  width: 70%;
+  height: auto;
+  border-radius: 15px;
+}
+.heading {
+  color: var(--primary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 800 !important;
+  font-size: 2rem !important;
+}
+.description {
+  margin-top: 0.5rem !important;
+  color: var(--primary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+.keyFeaturesSection {
+  /* border: 2px solid black; */
+  width: 100% !important;
+  height: auto;
+  background-color: var(--Third-background) !important;
+  padding: 60px 30px;
+  margin-top: 30px;
+}
+.card {
+  width: 100%;
+  height: auto;
+  padding: 10px 15px !important;
+  background-color: var(--primary-background) !important;
+}
+.aboutReact {
+  width: 100%;
+  height: auto;
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.features {
+  color: var(--primary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+}
+.features > span {
+  color: var(--primary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 800 !important;
+  font-size: 1.5rem !important;
+  margin-right: 5px;
+}
+.list {
+  /* border: 2px solid red; */
+  margin-left: 20px;
+}
+.listItem {
+  /* border: 2px solid red !important; */
+  margin: 5px !important;
+}
+.listItem > span {
+  color: var(--primary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  margin-right: 5px;
+}
