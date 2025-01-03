@@ -12,6 +12,7 @@ import Register from "./Pages/Register/Register";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import ReactPage from "./Pages/React/ReactPage";
+import HtmlPage from "./Pages/HTML/HtmlPage";
 
 export const DataShareContent = createContext();
 
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="learn-react" element={<ReactPage />} />
+        <Route path="html-notes" element={<HtmlPage />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
       </Route>

@@ -31,7 +31,7 @@ const ReactPage = () => {
             style={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "start",
+              alignItems: "start", 
               flexDirection: "column",
             }}
           >
