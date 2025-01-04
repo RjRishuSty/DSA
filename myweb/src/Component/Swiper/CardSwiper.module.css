@@ -1,0 +1,24 @@
+.mySwipper{
+    /* border: 2px solid green !important; */
+    width: 100% !important;
+    height: auto !important;
+}
+.card{
+    width: 100% !important;
+    height: 50vh;
+    background-color: rgb(211, 209, 209)!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer !important;
+}
+.card:hover{
+    filter: brightness(50%) !important;
+}
+.heading{
+    color: #0e44a0 !important;
+    font-family: var(--primary-font-family) !important;
+    font-weight: 800 !important;
+    font-size: 2.5rem !important;
+
+}

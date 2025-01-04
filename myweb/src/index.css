@@ -20,6 +20,7 @@
 }
 body{
   background-color: var(--primary-background) !important;
+  font-family: var(--primary-font-family) !important;
 }
 
 body.light-mode {
@@ -27,6 +28,7 @@ body.light-mode {
   --secondary-background: rgb(0, 0, 0);
   --primary-font-color: rgb(0, 0, 0);
   --secondary-font-color: rgb(255, 255, 255);
+  --primary-font-family: "Nunito", sans-serif;
   
 }
 body.dark-mode {
@@ -37,6 +39,7 @@ body.dark-mode {
   --learn-more-color: rgb(167, 25, 255);
   --menu-Color:rgb(255, 255, 255);
   --logo-color: #ffffff;
+  --primary-font-family: "Nunito", sans-serif;
   
 }
 a {

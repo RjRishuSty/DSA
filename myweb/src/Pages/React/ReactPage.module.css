@@ -23,6 +23,12 @@
   font-weight: 800 !important;
   font-size: 2rem !important;
 }
+.subHeading{
+  color: var(--primary-font-color) !important;
+  font-family: var(--primary-font-family) !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+}
 .description {
   margin-top: 0.5rem !important;
   color: var(--primary-font-color) !important;

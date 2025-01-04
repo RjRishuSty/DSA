@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./ReactPage.module.css";
-import { Box, Card, Container, Grid, Typography } from "@mui/material";
+import { Box, Card, Container, Grid, Stack, Typography } from "@mui/material";
 import ReactImg from "../../assets/react.png";
 import { keyFeatures } from "../../ReactNotes.js";
 import HeadingBorder from "../../Component/HeadingBorder/HeadingBorder.jsx";
+import CardSwiper from "../../Component/Swiper/CardSwiper.jsx";
+import {reactHooks} from '../../ReactHooks.js';
 
 const ReactPage = () => {
   return (
@@ -31,7 +33,7 @@ const ReactPage = () => {
             style={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "start", 
+              alignItems: "start",
               flexDirection: "column",
             }}
           >
@@ -61,20 +63,21 @@ const ReactPage = () => {
       </Container>
       <Box component="div" className={Styles.keyFeaturesSection}>
         <Grid container spacing={2}>
-          {keyFeatures.map((item) => (
+          {keyFeatures.map((item,index) => (
             <Grid
               item
               md={item.heading === "State and Props" ? 12 : 6}
               sm={item.heading === "State and Props" ? 12 : 12}
               xs={item.heading === "State and Props" ? 12 : 12}
+              key={index}
             >
               {item.heading === "State and Props" ? (
-                <Card className={Styles.card}>
+                <Card className={Styles.card} key={index}>
                   <Typography className={Styles.features} component="h3">
                     <span>{item.heading}:</span>
-                    {item.items.map((childItem) => (
+                    {item.items.map((childItem,index) => (
                       <ul className={Styles.list}>
-                        <li className={Styles.listItem}>
+                        <li className={Styles.listItem} key={index}>
                           <span>{childItem.name}:</span>
                           {childItem.description}
                         </li>
@@ -93,6 +96,75 @@ const ReactPage = () => {
           ))}
         </Grid>
       </Box>
+      <Stack component="section" sx={{ mt: 8, py: 5 }}>
+        <Container
+          component="div"
+          sx={{
+            display: "flex",
+            justifyContent: "start",
+            alignItems: "center",
+          }}
+        >
+          <HeadingBorder context={"borderOne"} />
+          <Typography
+            variant="h2"
+            className={Styles.heading}
+            textAlign="center"
+            gutterBottom
+          >
+            Key Features of Hooks
+          </Typography>
+          <HeadingBorder context={"borderOne"} />
+        </Container>
+        <Container component="div" sx={{ mt: 4, py: 3 }}>
+          <Typography className={Styles.heading}>What is hook?</Typography>
+          <Typography component="p" className={Styles.description} gutterBottom>
+            A hook is a special function that allows developers to "hook into"
+            React features like state, lifecycle methods, and context directly
+            from functional components, without the need to use class
+            components. Hooks enable cleaner, reusable, and more modular code by
+            providing a way to manage component behavior and side effects in a
+            more declarative manner.
+          </Typography>
+          {/*  */}
+          <Box component="div" mt={3}>
+            <Typography component="h5" className={Styles.subHeading}>
+              Benefits of Hook
+            </Typography>
+            <Grid container rowSpacing={2} columnSpacing={1}>
+              <Grid item md={6} sm="12" xs="12">
+                <Typography className={Styles.description}>
+                  (1) Enable state and side-effects in functional components.
+                </Typography>
+              </Grid>
+              <Grid item md={6} sm="12" xs="12">
+                <Typography className={Styles.description}>
+                  (2) Promote better reusability and separation of concerns
+                  through custom hooks.
+                </Typography>
+              </Grid>
+            </Grid>
+            <Typography component="h5" className={Styles.subHeading}>
+              Rules of Hook
+            </Typography>
+            <Grid container rowSpacing={2} columnSpacing={2}>
+              <Grid item md={6} sm="12" xs="12">
+                <Typography className={Styles.description}>
+                  (1) Only call hooks at the top level: Don’t call hooks inside
+                  loops, conditions, or nested functions.,
+                </Typography>
+              </Grid>
+              <Grid item md={6} sm="12" xs="12">
+                <Typography className={Styles.description}>
+                  (2) Only call hooks from React functions: Hooks should only be
+                  called inside React functional components or custom hooks.
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
+        </Container>
+        <CardSwiper context={reactHooks} />
+      </Stack>
     </Box>
   );
 };
