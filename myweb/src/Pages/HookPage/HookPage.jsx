@@ -1,91 +1,180 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {
+  Stack,
+  Typography,
+  Container,
+  Box,
+  Grid,
+  Card,
+  CardMedia,
+  Paper,
+} from "@mui/material";
+import Styles from "./HookPage.module.css";
 import { useParams } from "react-router-dom";
+import HeadingBorder from "../../Component/HeadingBorder/HeadingBorder";
+import { reactHooks } from "../../ReactHooks.js";
 
 const HookPage = () => {
-  const { hookname } = useParams();
-  console.log(hookname);
+  const { hookName } = useParams();
+  const [hook, setHook] = useState([]);
 
-  const hookInfo = [
-    {
-      title: "useState",
-      question: "What is useState?",
-      answer:
-        "The useState hook is a built-in React function that allows functional components to manage state. It provides a way to add local state to functional components, replacing the state object and setState method used in class components.",
-      syntax: "const [state, setState] = useState(initialValue)",
-      points: [
-        { name: "state", desc: "The current state value." },
-        { name: "setState", desc: "A function to update the state." },
-        {
-          name: "initialValue",
-          desc: "The initial value of the state. It can be of any data type (number, string, object, array, etc.).",
-        },
-      ],
-      subTitle: [
-        { name: "Key Features" },
-        { name: "Frequently Asked Questions" },
-        { name: "Rules of useState" },
-        { name: "Syntax" },
-      ],
-      features: [
-        {
-          name: "Preserves State Between Renders",
-          desc: "The state persists across renders and updates when changed.",
-        },
-        {
-          name: "Triggers Re-Renders",
-          desc: "Changing the state with setState triggers a re-render of the component.",
-        },
-        {
-          name: "Independent State",
-          desc: "Each useState call is independent, allowing multiple states in a single component.",
-        },
-      ],
-      rules: [
-        {
-          name: "Call at the Top Level",
-          desc: [
-            "Do not call useState inside loops, conditions, or nested functions.",
-            "Always call it at the top level of the component.",
-          ],
-        },
-        {
-          name: "Initialize Only in Functional Components",
-          desc: [
-            "useState can only be used in functional components or custom hooks.",
-          ],
-        },
-        {
-          name: "State Persistence",
-          desc: [
-            "State is preserved between renders and resets only when the component unmounts.",
-          ],
-        },
-      ],
-      freqQuestions: [
-        {
-          question: "Can I use multiple useState calls in a component?",
-          answer:
-            "Yes, each useState call creates independent state variables.",
-        },
-        {
-          question:
-            "Does useState merge state like setState in class components?",
-          answer: "No, useState replaces state instead of merging it.",
-        },
-        {
-          question: "Why does useState use a functional update?",
-          answer:
-            "Functional updates ensure the state update logic works correctly with asynchronous or batched state updates.",
-        },
-        {
-          question: "How can I reset state to its initial value?",
-          answer: "Use setState(initialValue) to reset the state manually.",
-        },
-      ],
-    },
-  ];
+  useEffect(() => {
+    const filtered = reactHooks.filter((item) => hookName === item.title);
+    console.log(filtered, "useEffect");
+    setHook(filtered);
+  }, [hookName]);
 
-  return <div>HookPage</div>;
+  return (
+    <Stack component="section" sx={{ border: "2px solid", py: 5 }}>
+      {hook.length > 0 ? (
+        hook.map((item) => (
+          <Container sx={{ mt: 9 }}>
+            <Box
+              component="div"
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <HeadingBorder context={"borderOne"} />
+              <Typography
+                component="h2"
+                variant="h2"
+                gutterBottom
+                className={Styles.heading}
+              >
+                {item.title}
+              </Typography>
+              <HeadingBorder context={"borderOne"} />
+            </Box>
+            <Box sx={{ mt: 4 }}>
+              <Grid container rowSpacing={2} columnSpacing={4}>
+                <Grid
+                  item
+                  md={5}
+                  sm={12}
+                  xs={12}
+                  display="flex "
+                  justifyContent="center"
+                  alignItems="center"
+                  flexDirection="column"
+                >
+                  <Card
+                    sx={{
+                      backgroundColor: "transparent",
+                      borderRadius: "20px",
+                    }}
+                  >
+                    <CardMedia
+                      sx={{
+                        backgroundPosition: "center",
+                        borderRadius: "20px",
+                      }}
+                      component="img"
+                      alt={item.title}
+                      image={item.img || "https://via.placeholder.com/150"}
+                    />
+                  </Card>
+                </Grid>
+                <Grid
+                  item
+                  md={7}
+                  sm={12}
+                  xs={12}
+                  display="flex "
+                  justifyContent="center"
+                  alignItems="start"
+                  flexDirection="column"
+                >
+                  <Typography
+                    gutterBottom
+                    component="h4"
+                    variant="h4"
+                    className={Styles.heading}
+                  >
+                    {item.description.question}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    component="p"
+                    variant="subtitle1"
+                    className={Styles.description}
+                  >
+                    {item.description.answer}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    component="p"
+                    variant="subtitle2"
+                    className={Styles.syntex}
+                  >
+                    {item.description.syntax}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Box>
+            <Box sx={{ border: "2px solid", py: 5, mt: 9 }}>
+              <Box
+                component="div"
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <HeadingBorder />
+                <Typography variant="h3" className={Styles.heading}>
+                  About useState
+                </Typography>
+                <HeadingBorder />
+              </Box>
+              {item.subTitle.map((title) => (
+                <Paper elevation={4} sx={{ padding: "20px", margin: "20px" }}>
+                  <Typography className={Styles.subHeading} variant="h5">
+                    {title.name}
+                  </Typography>
+                  {title.name === "Key Features" &&
+                    item.features.map((featur) => (
+                      <>
+                        <Typography
+                          className={Styles.subHeading}
+                          variant="overline"
+                          display="flex"
+                          justifyContent="start"
+                          alignItems="center"
+                        >
+                          <Typography color="error.main" variant="h4">*</Typography>
+                          {featur.name}:- <span>hello</span>
+                        </Typography>
+                        <span
+                          className={Styles.description}
+                          variant="subtitle2"
+                          sx={{ letterSpacing: "1px" }}
+                        >
+                          {featur.desc}
+                        </span>
+                      </>
+                    ))}
+                </Paper>
+              ))}
+            </Box>
+          </Container>
+        ))
+      ) : (
+        <Container sx={{ mt: 9 }}>
+          <Typography
+            component="h2"
+            variant="h2"
+            gutterBottom
+            className={Styles.heading}
+          >
+            Not Found
+          </Typography>
+        </Container>
+      )}
+    </Stack>
+  );
 };
 
 export default HookPage;

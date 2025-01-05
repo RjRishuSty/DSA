@@ -1,12 +1,10 @@
 .borderOne {
-  border: 2px solid var(--logo-color);
-  width: 50%;
-  height: auto;
-  /* margin-top: 2rem; */
+  border: 2px solid var(--logo-color) !important;
+  min-width: 20% !important;
+  height: 0 !important;
 }
 .borderTwo{
-  border: 1px solid white;
-  width: 30%;
-  height: auto;
+  border: 1x solid white !important;
+  min-width: 20%;
   margin-top: 1rem;
 } 

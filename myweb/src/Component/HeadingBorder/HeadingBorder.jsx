@@ -13,3 +13,4 @@ const HeadingBorder = ({ context }) => {
 };
 
 export default HeadingBorder;
+ 
