@@ -14,6 +14,7 @@ import Contact from "./Pages/Contact/Contact";
 import ReactPage from "./Pages/React/ReactPage";
 import HtmlPage from "./Pages/HTML/HtmlPage";
 import HookPage from "./Pages/HookPage/HookPage";
+import Projects from "./Pages/Projects/Projects";
 
 export const DataShareContent = createContext();
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="projects" element={<Projects />} />
         <Route path="learn-react" element={<ReactPage />} />
         <Route path="learn-react/:hookName" element={<HookPage />} />
         <Route path="html-notes" element={<HtmlPage />} />

@@ -1,0 +1,7 @@
+.projectSection{
+    width: 100%;
+    min-height: 50vh;
+    padding: 5rem 0px;
+    background: rgb(38,13,206);
+    background: linear-gradient(54deg, rgba(38,13,206,1) 0%, rgba(26,188,10,1) 100%);
+}

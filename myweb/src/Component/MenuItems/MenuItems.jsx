@@ -6,7 +6,7 @@ export const menu = [
   { menuItem: "Home", path: "/" },
   { menuItem: "About", path: "about" },
   { menuItem: "Contact", path: "contact" },
-  { menuItem: "Sprint", path: "sprint" },
+  { menuItem: "Projects", path: "projects" },
   { menuItem: "DSA", path: "dsa" },
   { menuItem: "React", path: "learn-react" },
   { menuItem: "CSS", path: "css" },
