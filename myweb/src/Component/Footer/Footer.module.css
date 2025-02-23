@@ -3,6 +3,9 @@
   height: auto;
   padding: 80px 10px 50px 10px;
   background: var(--footer-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footerItems {
   width: 100%;

@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Box,
+  Container,
   darkScrollbar,
   Grid,
   List,
@@ -8,6 +9,7 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Stack,
   Typography,
 } from "@mui/material";
 import Styles from "./Footer.module.css";
@@ -36,7 +38,8 @@ export const Footer = () => {
   ];
 
   return (
-    <Box component="footer" className={Styles.footer}>
+    <Stack component="footer" className={Styles.footer}>
+      <Container>
       <Grid container>
         <Grid item className={Styles.footerItems} md={4} sm={6} xs={12}>
           <Logo context="footer" />
@@ -110,6 +113,7 @@ export const Footer = () => {
           </List>
         </Grid>
       </Grid>
-    </Box>
-  );
+      </Container>
+    </Stack>
+  ); 
 };
